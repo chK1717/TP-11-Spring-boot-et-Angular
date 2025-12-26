@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>Liste des Catégories</h2>
+  <a routerLink="/categories/add" class="btn btn-primary mb-3">Ajouter une catégorie</a>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of categories">
+        <td>{{ cat.name }}</td>
+        <td>{{ cat.description }}</td>
+        <td>
+          <a [routerLink]="['/categories/edit', cat.id]" class="btn btn-sm btn-warning">Modifier</a>
+          <button (click)="delete(cat.id!)" class="btn btn-sm btn-danger ms-2">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h2>{{ isEdit ? 'Modifier' : 'Ajouter' }} une Catégorie</h2>
+  
+  <form (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">Nom *</label>
+      <input type="text" class="form-control" [(ngModel)]="category.name" name="name" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" [(ngModel)]="category.description" name="description" rows="3"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Enregistrer</button>
+    <a routerLink="/categories" class="btn btn-secondary ms-2">Annuler</a>
+  </form>
+</div>

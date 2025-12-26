@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>{{ isEdit ? 'Modifier' : 'Ajouter' }} un Produit</h2>
+  
+  <form (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">Nom *</label>
+      <input type="text" class="form-control" [(ngModel)]="product.name" name="name" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Prix *</label>
+      <input type="number" class="form-control" [(ngModel)]="product.price" name="price" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Stock *</label>
+      <input type="number" class="form-control" [(ngModel)]="product.stock" name="stock" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Catégorie *</label>
+      <select class="form-control" [(ngModel)]="product.category.id" name="categoryId" required>
+        <option value="0">Sélectionner une catégorie</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+      </select>
+    </div>
+    
+    <button type="submit" class="btn btn-success">Enregistrer</button>
+    <a routerLink="/products" class="btn btn-secondary ms-2">Annuler</a>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+# Backend - Maven
+ecommerce-backend/target/
+ecommerce-backend/.mvn/
+ecommerce-backend/mvnw
+ecommerce-backend/mvnw.cmd
+ecommerce-backend/.idea/
+ecommerce-backend/*.iml
+
+# Frontend - Node/Angular
+ecommerce/node_modules/
+ecommerce/dist/
+ecommerce/.angular/
+ecommerce/.vscode/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
